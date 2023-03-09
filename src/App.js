@@ -1,12 +1,9 @@
-import React from "react";
-import Button from "./components/button/Button";
-// import "./App.css";
-
+import React, { useState } from "react";
+import SignUpForm from "./components/form/SignUpForm";
 function App() {
     return (
-        <div>
-            <Button>Primary</Button>
-            <Button className="button--secondary">Secondary</Button>
+        <div className="p-5">
+            <SignUpForm />
         </div>
     );
 }
