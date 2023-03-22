@@ -32,18 +32,19 @@ const SignUpForm = () => {
                 job: "",
                 terms: false,
             }}
-            validationSchema={Yup.object({
-                firstName: Yup.string().required("Required"),
-                lastName: Yup.string().required("Required"),
-                email: Yup.string().email().required("Required"),
-                intro: Yup.string().required("Required"),
-                job: Yup.string().required("Required"),
-                terms: Yup.boolean().oneOf(
-                    [true],
-                    "Please check the terms and conditions"
-                ),
-            })}
-            onSubmit={(values) => {
+            // validationSchema={Yup.object({
+            //     firstName: Yup.string().required("Required"),
+            //     lastName: Yup.string().required("Required"),
+            //     email: Yup.string().email().required("Required"),
+            //     intro: Yup.string().required("Required"),
+            //     job: Yup.string().required("Required"),
+            //     terms: Yup.boolean().oneOf(
+            //         [true],
+            //         "Please check the terms and conditions"
+            //     ),
+            // })}
+            onSubmit={(values, actions) => {
+                console.log(actions);
                 console.log(values);
             }}
             autoComplete="off"
